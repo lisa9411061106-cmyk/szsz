@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>時之 SHIZHI - 喜歡的歌 (MUSIC)</title>
+  <meta name="description" content="時之喜愛的歌手">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Fullscreen Ambient Background -->
+  <div class="site-bg"></div>
+  <div class="site-bg-overlay"></div>
+
+  <!-- Top Presentation Yellow Banner -->
+  <header class="presentation-top-banner">
+    <div class="banner-content-wrap">
+      <div class="banner-title-group">
+        <span class="banner-main-title">時之 SHIZHI</span>
+        <span class="banner-divider"></span>
+        <span class="banner-sub-tag">個人自我介紹網站</span>
+        <span class="banner-divider"></span>
+        <span class="banner-student-id">2026 PORTFOLIO</span>
+      </div>
+      <div class="banner-status-badge">
+        <span class="status-dot"></span>
+        <span>特技是邊走邊睡 </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Desktop Main Wrapper (1240px) -->
+  <div class="desktop-main-wrapper">
+
+    <!-- Apparel Store Style Category Navigation Bar -->
+    <nav class="store-category-nav-bar" aria-label="服飾店風格分類導覽">
+      <div class="store-category-links">
+        <a href="index.html" class="store-nav-item">
+          <span>首頁 / 關於我</span>
+        </a>
+        <a href="interests.html" class="store-nav-item">
+          <span>興趣 / 坑與追番</span>
+          <span class="store-item-count">19</span>
+        </a>
+        <a href="music.html" class="store-nav-item active">
+          <span>喜歡的歌 / 音樂</span>
+          <span class="store-item-count">6</span>
+        </a>
+        <a href="creations.html" class="store-nav-item">
+          <span>創作 / 圖畫與影片</span>
+          <span class="store-item-count">6</span>
+        </a>
+        <a href="social.html" class="store-nav-item">
+          <span>社群 / 聯絡方式</span>
+          <span class="store-item-count">3</span>
+        </a>
+      </div>
+      <button class="store-share-btn" id="quick-share-btn" title="複製網站連結">
+        <span>分享頁面</span>
+      </button>
+    </nav>
+
+    <!-- Category Page Header Banner -->
+    <header class="category-header-banner">
+      <div>
+        <nav class="breadcrumb-trail" aria-label="麵包屑導航">
+          <a href="index.html">首頁</a>
+          <span>&gt;</span>
+          <span>音樂特輯 (MUSIC PLAYLIST)</span>
+        </nav>
+        <h1 class="category-page-title">
+          <span>喜歡的歌</span>
+          <span style="font-size: 1.1rem; color: var(--color-mint-dark);">SOUNDTRACK &amp; J-POP / K-POP</span>
+        </h1>
+        <p class="category-lead-desc">
+          聽很雜，平時創作與生活最常播放的精選歌手與樂團曲目。
+        </p>
+      </div>
+      <div class="category-stats-pill">
+        <span>6 組精選音樂人推薦</span>
+      </div>
+    </header>
+
+    <!-- Content: 音樂雙欄展示 -->
+    <main class="music-grid-layout">
+
+      <!-- Left: Artist names only -->
+      <article class="pop-card">
+        <span class="pop-tag-pill">1. ARTISTS ｜ 喜愛歌手與樂團</span>
+        <p style="font-size: 0.96rem; font-weight: 700; color: var(--color-text-muted); margin-bottom: 14px;">
+          🎧 聽很雜，大多是 <strong>J-POP</strong> 與 <strong>K-POP</strong>！選擇歌手即可切換右側 Spotify 播放器：
+        </p>
+        <div class="spotify-artist-buttons" aria-label="選擇 Spotify 歌手">
+          <button class="spotify-artist-button" type="button" data-name="Eve"
+            data-spotify-id="58oPVy7oihAEXE0Ott6JOf" aria-pressed="true">Eve</button>
+          <button class="spotify-artist-button" type="button" data-name="Måneskin"
+            data-spotify-id="0lAWpj5szCSwM4rUMHYmrr" aria-pressed="false">Måneskin</button>
+          <button class="spotify-artist-button" type="button" data-name="Fujii Kaze (藤井風)"
+            data-spotify-id="6bDWAcdtVR3WHz2xtiIPUi" aria-pressed="false">Fujii Kaze (藤井風)</button>
+          <button class="spotify-artist-button" type="button" data-name="怕胖團"
+            data-spotify-search="怕胖團 PAPUN BAND" aria-pressed="false">怕胖團</button>
+          <button class="spotify-artist-button" type="button" data-name="DAY6"
+            data-spotify-id="5TnQc2N1iKlFjYD7CPGvFc" aria-pressed="false">DAY6</button>
+          <button class="spotify-artist-button" type="button" data-name="DPR IAN"
+            data-spotify-id="2o8gT0fQmFxGNbowbdgeZe" aria-pressed="false">DPR IAN</button>
+        </div>
+      </article>
+
+      <!-- Spotify player replaces the previous vinyl deck -->
+      <section class="spotify-player-card" aria-label="Spotify 歌手播放器">
+        <div>
+          <p class="spotify-player-heading">2. SPOTIFY PLAYER ｜ 音樂播放器</p>
+          <p class="spotify-current-artist" id="spotify-current-artist">Eve</p>
+          <iframe
+            class="spotify-embed-frame"
+            id="spotify-artist-embed"
+            title="Eve Spotify 播放器"
+            src="https://open.spotify.com/embed/artist/58oPVy7oihAEXE0Ott6JOf?utm_source=generator&theme=0"
+            width="100%" height="352" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+          <div class="spotify-search-fallback" id="spotify-search-fallback" hidden>
+            這位歌手目前改以 Spotify 搜尋頁開啟，避免嵌入到錯誤的藝人帳號。
+            <br><a id="spotify-search-link" href="https://open.spotify.com/search/%E6%80%95%E8%83%96%E5%9C%98%20PAPUN%20BAND"
+              target="_blank" rel="noopener noreferrer">在 Spotify 搜尋怕胖團</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="desktop-footer">
+      <div class="footer-stamp">
+        時之 SHIZHI © 2026 個人自我介紹
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Global Toast Notification -->
+  <div class="toast-msg" id="toast-msg"></div>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    (() => {
+      const buttons = document.querySelectorAll(".spotify-artist-button");
+      const player = document.getElementById("spotify-artist-embed");
+      const currentArtist = document.getElementById("spotify-current-artist");
+      const fallback = document.getElementById("spotify-search-fallback");
+      const searchLink = document.getElementById("spotify-search-link");
+      if (!buttons.length || !player || !currentArtist || !fallback || !searchLink) return;
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((item) => item.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          const name = button.dataset.name || button.textContent.trim();
+          const artistId = button.dataset.spotifyId;
+          currentArtist.textContent = name;
+          player.title = name + " Spotify 播放器";
+
+          if (artistId) {
+            player.hidden = false;
+            fallback.hidden = true;
+            player.src = "https://open.spotify.com/embed/artist/" +
+              encodeURIComponent(artistId) + "?utm_source=generator&theme=0";
+          } else {
+            player.hidden = true;
+            fallback.hidden = false;
+            const query = button.dataset.spotifySearch || name;
+            searchLink.href = "https://open.spotify.com/search/" + encodeURIComponent(query);
+            searchLink.textContent = "在 Spotify 搜尋" + name;
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
